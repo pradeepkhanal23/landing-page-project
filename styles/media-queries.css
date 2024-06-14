@@ -1,2 +1,42 @@
-@media (min-width: 500px) {
+/* Medium screen and above */
+
+@media (min-width: 950px) {
+  .hero-wrapper {
+    flex-direction: row;
+    position: relative;
+  }
+
+  .section-right .colorful-flyers {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 9%;
+    bottom: 0;
+    width: 100%;
+    transform: skew(-10deg);
+    justify-content: start;
+  }
+
+  .section-right .colorful-flyers article {
+    margin-inline: 1rem;
+  }
+
+  .card-body {
+    transform: skew(10deg);
+  }
+}
+
+/* large and above */
+@media (min-width: 1100px) {
+  .section-right .colorful-flyers {
+    justify-content: center;
+  }
+}
+
+/* xl and above */
+@media (min-width: 1300px) {
+  .section-right .colorful-flyers {
+    justify-content: flex-end;
+    right: 10%;
+  }
 }

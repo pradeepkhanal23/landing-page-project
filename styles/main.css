@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +13,13 @@
   --bg-color: #f5f5f5;
   --bg-gray: rgba(162, 162, 162, 0.412);
   --light-blue: #00a6e8f0;
+  --dark-blue: #0a64ffe7;
   --skew-angle: -10deg;
   --skew-angle-opposite: 10deg;
+}
+
+.active {
+  font-weight: 700;
 }
 
 html {
@@ -33,6 +40,7 @@ main {
   flex-grow: 1;
 }
 
+/* -----------------------------NAVBAR SECTION------------------------------------------------------------------ */
 .navbar {
   display: flex;
   align-items: center;
@@ -109,4 +117,133 @@ main {
   column-gap: 1rem;
   display: flex;
   align-items: center;
+}
+
+/* -----------------------------HERO SECTION------------------------------------------------------------------ */
+.hero-wrapper {
+  margin-top: 0.5rem;
+  background-image: url("../assets/images/plumbing-cost-hydro-blog-cont-img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 680px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.section-left {
+  z-index: 2;
+  padding: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 3rem;
+}
+
+.section-left-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.7;
+}
+
+.skewed-blue-flag {
+  background-color: var(--dark-blue);
+  padding: 0rem 2.5rem 0rem 0.5rem;
+  position: relative;
+  /* created the skewed corner using https://bennettfeely.com/clippy/ */
+  clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.hero-title p {
+  font-size: 3rem;
+  font-weight: 900;
+  white-space: nowrap;
+}
+
+.hero-info {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+.hero-info img {
+  height: 80px;
+  width: 80px;
+}
+
+.hero-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  column-gap: 1rem;
+}
+
+.hero-info-row img {
+  background-color: var(--light-blue);
+  padding: 0.6rem;
+  border-radius: 50%;
+}
+
+hero-info-row div {
+  display: flex;
+}
+
+.hero-info-row h3 {
+  font-weight: 700;
+}
+
+.hero-info-row span {
+  font-size: 0.8rem;
+}
+
+.section-right {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.section-right img {
+  height: 100%;
+}
+
+.card-body p {
+  font-size: 0.7rem;
+}
+
+.card-body span {
+  font-size: 1rem;
+  font-weight: 700;
+}
+.card-body div {
+  font-weight: 700;
+}
+
+.gold {
+  color: gold;
+}
+
+.section-right .colorful-flyers {
+  position: absolute;
+  bottom: 1rem;
+  right: 0.5rem;
+  flex-direction: column;
+}
+
+.section-right img {
+  height: 100%;
+}
+
+.colorful-flyers article {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.colorful-flyers .card-title {
+  font-family: "Spicy Rice", sans-serif;
+  font-size: 3rem;
 }

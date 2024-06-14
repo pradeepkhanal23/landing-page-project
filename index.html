@@ -4,6 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aqua Pro Services</title>
+
+    <!-- font awesome cdn link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -20,6 +29,7 @@
     <link rel="stylesheet" href="./styles/media-queries.css" />
   </head>
   <body>
+    <!-- Header Section -->
     <header>
       <!-- Navbar -->
       <nav class="navbar bg-dark" data-bs-theme="dark">
@@ -27,20 +37,23 @@
           <!-- Navbar Logo and Brand -->
           <a class="navbar-brand" href="#">
             <img
-              src="./assets/logos/brand-logo.svg"
+              src="./assets/logos/brand.svg"
               alt="brand logo"
               width="70"
               height="70"
               class="d-md-inline-block align-text-top"
             />
-            <!-- <h1 class="d-none d-md-inline-block">Aqua Pro</h1> -->
+            <h1 class="d-none d-md-inline-block">Aqua Pro</h1>
           </a>
 
           <!-- Navlinks -->
           <div class="nav-links d-none d-md-flex">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link text-light" aria-current="page" href="#"
+                <a
+                  class="nav-link text-light active"
+                  aria-current="page"
+                  href="#"
                   >Home</a
                 >
               </li>
@@ -61,7 +74,7 @@
               <div class="online-status">
                 <span class="text-light"> We're Available </span>
                 <img
-                  src="./assets/logos/online-logo.svg"
+                  src="./assets/logos/online.svg"
                   alt="green online indicator"
                 />
                 <span class="text-light">11:12 am</span>
@@ -126,8 +139,96 @@
       </nav>
     </header>
 
+    <!-- Main content -->
     <main>
-      <!-- Main content -->
+      <!-- Hero Section -->
+      <section id="hero">
+        <div class="hero-wrapper">
+          <div class="section-left-overlay"></div>
+          <div class="section-left text-light">
+            <div class="hero-title">
+              <p>YOUR LOCAL</p>
+              <div class="skewed-blue-flag">
+                <p>HOT WATERS</p>
+              </div>
+              <p>EXPERTS</p>
+            </div>
+            <div class="hero-info">
+              <div class="hero-info-row">
+                <img src="./assets/logos/tool.svg" alt="plumbing logo" />
+                <div>
+                  <h3>Upfront pricing</h3>
+                  <span class="actions"
+                    >Know the price of the job we start.</span
+                  >
+                </div>
+              </div>
+              <div class="hero-info-row">
+                <img src="./assets/logos/tool.svg" alt="plumbing logo" />
+                <div>
+                  <h3>$0 Call Out</h3>
+                  <span class="actions">No call out fees.</span>
+                </div>
+              </div>
+              <div class="hero-info-row">
+                <img src="./assets/logos/tool.svg" alt="plumbing logo" />
+                <div>
+                  <h3>50$ off for online booking.</h3>
+                  <span class="actions"
+                    >Book online to receive a discount.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-right">
+            <img
+              src="./assets/images/technician-banner.png"
+              alt="technician-banner"
+              class="foreground"
+            />
+            <div class="colorful-flyers">
+              <article class="card text-bg-primary">
+                <div class="card-body">
+                  <h5 class="card-title">4.9</h5>
+                  <div class="icon-container">
+                    <i class="fa-solid fa-star gold"></i>
+                    <i class="fa-solid fa-star gold"></i>
+                    <i class="fa-solid fa-star gold"></i>
+                    <i class="fa-solid fa-star gold"></i>
+                    <i class="fa-solid fa-star gold"></i>
+                  </div>
+                  <p class="card-text">Average Ratings</p>
+                  <span class="card-text">Facebook</span>
+                </div>
+              </article>
+              <article class="card text-bg-danger">
+                <div class="card-body">
+                  <h5 class="card-title">5.0</h5>
+                  <div class="icon-container">
+                    <i class="fa-solid fa-star gold"></i>
+                    <i class="fa-solid fa-star gold"></i>
+                    <i class="fa-solid fa-star gold"></i>
+                    <i class="fa-solid fa-star gold"></i>
+                    <i class="fa-solid fa-star gold"></i>
+                  </div>
+                  <p class="card-text">Average Ratings</p>
+                  <span class="card-text">Google</span>
+                </div>
+              </article>
+              <article class="card text-bg-warning">
+                <div class="card-body text-dark">
+                  <h5 class="card-title">24h</h5>
+                  <div class="card-text">Emergency</div>
+                  <div class="card-text">Services</div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="get-a-quote"></section>
     </main>
 
     <footer>
