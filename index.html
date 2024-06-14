@@ -22,39 +22,69 @@
   <body>
     <header>
       <!-- Navbar -->
-      <nav
-        class="navbar bg-dark border-bottom border-body d-flex justify-content-around"
-        data-bs-theme="dark"
-      >
+      <nav class="navbar bg-dark" data-bs-theme="dark">
         <div class="container-fluid">
+          <!-- Navbar Logo and Brand -->
           <a class="navbar-brand" href="#">
             <img
-              src="./assets//images/logo.svg"
-              alt="Logo"
+              src="./assets/logos/brand-logo.svg"
+              alt="brand logo"
               width="70"
               height="70"
-              class="d-inline-block align-text-top"
+              class="d-md-inline-block align-text-top"
             />
-            <h1>Aqua Pro</h1>
+            <!-- <h1 class="d-none d-md-inline-block">Aqua Pro</h1> -->
           </a>
-          <div class="nav-links">
+
+          <!-- Navlinks -->
+          <div class="nav-links d-none d-md-flex">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link text-light" aria-current="page" href="#"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
+                <a class="nav-link text-light" href="#">Services</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
+                <a class="nav-link text-light" href="#">About</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="#">FAQ</a>
+                <a class="nav-link text-light" href="#">FAQ</a>
               </li>
+
+              <!-- custom skewed border -->
+              <div class="custom-skewed-border-right"></div>
+
+              <!-- Online status section -->
+              <div class="online-status">
+                <span class="text-light"> We're Available </span>
+                <img
+                  src="./assets/logos/online-logo.svg"
+                  alt="green online indicator"
+                />
+                <span class="text-light">11:12 am</span>
+              </div>
+
+              <!-- custom skewed border -->
+              <div class="custom-skewed-border-right"></div>
+
+              <!-- Quote Section -->
+              <div class="flex-row-center btn-container">
+                <button class="text-light quote-btn">
+                  <span class="skew-back"> Get a free Quote </span>
+                </button>
+                <button class="text-light phone-btn">
+                  <span class="skew-back">1300 00 000</span>
+                </button>
+              </div>
             </ul>
           </div>
+
+          <!-- Navbar Toggle Button -->
           <button
-            class="navbar-toggler"
+            class="navbar-toggler d-block d-md-none"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -64,8 +94,10 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+
+          <!-- Navbar contents inside the collapsed navbar -->
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-md-none">
               <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
@@ -77,6 +109,16 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <button class="text-light quote-btn mb-2">
+                  <span class="skew-back"> Get a free Quote </span>
+                </button>
+              </li>
+              <li class="nav-item">
+                <button class="text-light phone-btn">
+                  <span class="skew-back">1300 00 000</span>
+                </button>
               </li>
             </ul>
           </div>
