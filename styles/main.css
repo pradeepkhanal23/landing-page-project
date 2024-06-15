@@ -14,6 +14,8 @@
   --bg-gray: rgba(162, 162, 162, 0.412);
   --light-blue: #00a6e8f0;
   --dark-blue: #0a64ffe7;
+  --dark-yellow: #f6d100;
+  --navy-blue: #192a53;
   --skew-angle: -10deg;
   --skew-angle-opposite: 10deg;
 }
@@ -120,130 +122,207 @@ main {
 }
 
 /* -----------------------------HERO SECTION------------------------------------------------------------------ */
-.hero-wrapper {
-  margin-top: 0.5rem;
+
+.hero {
   background-image: url("../assets/images/plumbing-cost-hydro-blog-cont-img.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 680px;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
+  height: auto;
   position: relative;
+  z-index: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.section-left {
-  z-index: 2;
-  padding: 3rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  row-gap: 3rem;
-}
-
-.section-left-overlay {
-  position: absolute;
-  inset: 0;
+.wrapper-overlay {
   background-color: black;
   opacity: 0.7;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
-.skewed-blue-flag {
-  background-color: var(--dark-blue);
-  padding: 0rem 2.5rem 0rem 0.5rem;
-  position: relative;
-  /* created the skewed corner using https://bennettfeely.com/clippy/ */
-  clip-path: polygon(0 0, 100% 0%, 90% 100%, 0% 100%);
-}
-
-.hero-title p {
-  font-size: 3rem;
-  font-weight: 900;
+.display-2 {
+  font-size: 2.5rem;
+  font-weight: 800;
   white-space: nowrap;
 }
 
-.hero-info {
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
+.display-2:nth-child(2) {
+  background-color: var(--dark-blue);
+  padding: 0rem 1rem;
+  clip-path: polygon(0 0, 100% 0%, 96% 100%, 0% 100%);
 }
 
-.hero-info img {
-  height: 80px;
-  width: 80px;
-}
-
-.hero-info-row {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  column-gap: 1rem;
-}
-
-.hero-info-row img {
+.icon-container {
   background-color: var(--light-blue);
-  padding: 0.6rem;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
 }
 
-hero-info-row div {
-  display: flex;
+.icon-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  padding: 0.6rem;
 }
 
-.hero-info-row h3 {
+.fs-5 {
   font-weight: 700;
 }
 
-.hero-info-row span {
-  font-size: 0.8rem;
+/* Quote Section */
+.outer-parallelogram {
+  height: 180px;
+  width: 180px;
+  background-color: var(--light-blue);
+  transform: skew(var(--skew-angle));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-parallelogram {
+  height: 150px;
+  width: 150px;
+  border: 3px dashed white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }
 
-.section-right {
-  height: 100%;
-  width: 100%;
+.inner-parallelogram-content {
+  font-weight: 600;
+  transform: skew(var(--skew-angle-opposite));
+}
+
+.inner-parallelogram h4 {
+  font-size: 3rem;
+  font-weight: 800;
+}
+
+.light-blue {
+  color: var(--light-blue);
+}
+
+.get-quote .display-3,
+.services .display-3 {
+  font-weight: 700;
+}
+
+.get-quote article {
+  text-align: left;
+}
+
+.get-quote form {
+  margin: 0rem auto;
+  transform: translateY(20%);
+  border: 1px solid rgba(128, 128, 128, 0.157);
   position: relative;
 }
 
-.section-right img {
-  height: 100%;
-}
-
-.card-body p {
-  font-size: 0.7rem;
-}
-
-.card-body span {
-  font-size: 1rem;
-  font-weight: 700;
-}
-.card-body div {
-  font-weight: 700;
-}
-
-.gold {
-  color: gold;
-}
-
-.section-right .colorful-flyers {
+.yellow-coupon {
+  height: 80px;
+  width: 300px;
+  background-color: var(--dark-yellow);
   position: absolute;
-  bottom: 1rem;
-  right: 0.5rem;
-  flex-direction: column;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  left: 30;
+  clip-path: polygon(
+    0 0,
+    100% 0,
+    100% 20%,
+    100% 80%,
+    94% 100%,
+    20% 100%,
+    0 100%,
+    0% 20%
+  );
 }
 
-.section-right img {
-  height: 100%;
+/* services */
+.placeholder-box {
+  height: 200px;
+  width: 100%;
+  background-color: gray;
+  position: relative;
 }
 
-.colorful-flyers article {
-  text-align: center;
-  margin-bottom: 1rem;
+.placeholder-box-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
-.colorful-flyers .card-title {
-  font-family: "Spicy Rice", sans-serif;
-  font-size: 3rem;
+.placeholder-box-title img {
+  background-color: var(--light-blue);
+  padding: 0.6rem;
+}
+
+.placeholder-box-title .wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.placeholder-box-title span {
+  clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+  background-color: var(--navy-blue);
+  width: 60%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 0.8rem;
+  padding-left: 1rem;
+}
+
+.services h3 {
+  margin-top: 10rem;
+}
+
+.discount-container {
+  border: 2px dashed white;
+  display: flex;
+  justify-content: center;
+  column-gap: 0.5rem;
+  font-weight: 800;
+}
+
+.dollor-sign {
+  align-self: start;
+}
+
+.amount {
+  margin-right: 0.2rem;
+}
+
+.book-online-text p {
+  font-weight: 800;
+  margin-bottom: -1px;
+}
+
+.off-text {
+  transform: rotate(-90deg);
+}
+
+.brands-container h4 {
+  font-weight: 700;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo-container img {
+  flex: 1;
 }
