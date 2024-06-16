@@ -1,85 +1,42 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Spicy+Rice&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 :root {
-  --font: "Montserrat", monospace, serif;
+  --font: "Poppins", monospace, serif;
   --bg-color: #f5f5f5;
   --bg-gray: rgba(162, 162, 162, 0.412);
   --light-blue: #00a6e8f0;
-  --dark-blue: #0a64ffe7;
+  --dark-blue: #0a64ff;
   --dark-yellow: #f6d100;
   --navy-blue: #192a53;
   --skew-angle: -10deg;
   --skew-angle-opposite: 10deg;
 }
 
-.active {
-  font-weight: 700;
-}
-
-html {
-  width: 100%;
-  height: 100%;
-}
-
 body {
-  min-height: 100vh;
   background-color: var(--bg-color);
   width: 100%;
   font-family: var(--font);
-  display: flex;
-  flex-direction: column;
 }
 
-main {
-  flex-grow: 1;
+body::before {
+  display: block;
+  content: "";
+  height: 4rem;
 }
 
 /* -----------------------------NAVBAR SECTION------------------------------------------------------------------ */
-.navbar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-inline: 1rem;
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #f5f5f5;
 }
 
-.container-fluid {
-  column-gap: 5rem;
-}
-
-.navbar .navbar-brand {
-  display: flex;
-  align-items: center;
-  column-gap: 1rem;
-}
-
-.navbar .navbar-brand h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
-}
-
-.navbar .nav-links ul {
-  display: flex;
-  flex-direction: row;
-  column-gap: 1.2rem;
-  align-items: center;
-}
-
-.flex-row-center {
-  display: flex;
-  align-items: center;
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: #b3b3b3; /* Lighter color on hover for nav links */
 }
 
 .custom-skewed-border-right {
-  height: 3.5rem;
+  height: 2.8rem;
   width: 0.16rem;
   background-color: var(--bg-gray);
   transform: skew(var(--skew-angle));
@@ -89,8 +46,12 @@ main {
   padding: 0.6rem 0.8rem;
   display: flex;
   align-items: center;
-  column-gap: 1rem;
   font-weight: 600;
+  gap: 5px;
+}
+
+.btn-container .btn {
+  border-radius: 0;
 }
 
 .btn-container button {
@@ -112,65 +73,97 @@ main {
 .phone-btn {
   background-color: black;
   border: 2px solid white;
-  padding: 0.53rem 1rem;
+  padding: 0.55rem 1rem;
 }
 
 .online-status {
-  column-gap: 1rem;
   display: flex;
   align-items: center;
+  gap: 5px;
 }
 
 /* -----------------------------HERO SECTION------------------------------------------------------------------ */
 
-.hero {
+.showcase {
   background-image: url("../assets/images/plumbing-cost-hydro-blog-cont-img.jpg");
-  height: auto;
-  position: relative;
-  z-index: 1;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  width: 100%;
+  position: relative;
+  z-index: 1;
 }
 
-.wrapper-overlay {
-  background-color: black;
-  opacity: 0.7;
-  position: absolute;
-  inset: 0;
+.showcase-overlay {
   height: 100%;
   width: 100%;
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  opacity: 0.7;
   z-index: -1;
 }
 
+.showcase .container-fluid {
+  z-index: 1;
+}
+
 .display-2 {
-  font-size: 2.5rem;
   font-weight: 800;
   white-space: nowrap;
 }
 
 .display-2:nth-child(2) {
   background-color: var(--dark-blue);
-  padding: 0rem 1rem;
+  padding: 5px 25px;
   clip-path: polygon(0 0, 100% 0%, 96% 100%, 0% 100%);
 }
 
-.icon-container {
-  background-color: var(--light-blue);
-  height: 60px;
-  width: 60px;
+.wrapper img {
   border-radius: 50%;
+  background-color: var(--light-blue);
 }
 
-.icon-container img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  padding: 0.6rem;
+.technician-image {
+  width: 95%;
 }
 
-.fs-5 {
-  font-weight: 700;
+.banners {
+  right: 40px;
+  bottom: 0;
+  height: 200px;
+  width: 40%;
+  transform: skew(var(--skew-angle));
+}
+
+.banners i {
+  color: gold;
+}
+
+.banners .banner {
+  color: white;
+  padding: 1rem 1.5rem;
+}
+.banner.google-card {
+  background-color: rgb(215, 19, 19);
+}
+
+.banner.facebook-card {
+  background-color: var(--dark-blue);
+}
+
+.banner.emergency-card {
+  background-color: var(--dark-yellow);
+  color: black;
+}
+
+.banner .content {
+  transform: skew(var(--skew-angle-opposite));
+}
+
+.banners .rating-text {
+  font-size: 0.7rem;
+  font-weight: 400;
 }
 
 /* Quote Section */
@@ -194,7 +187,7 @@ main {
   color: white;
 }
 
-.inner-parallelogram-content {
+.inner-parallelogram .content {
   font-weight: 600;
   transform: skew(var(--skew-angle-opposite));
 }
@@ -211,10 +204,6 @@ main {
 .get-quote .display-3,
 .services .display-3 {
   font-weight: 700;
-}
-
-.get-quote article {
-  text-align: left;
 }
 
 .get-quote form {
@@ -326,3 +315,14 @@ main {
 .logo-container img {
   flex: 1;
 }
+
+/* @media (min-width: 1200px) {
+  .banners {
+    right: 20px;
+  }
+}
+@media (min-width: 1400px) {
+  .banners {
+    right: 80px;
+  }
+} */

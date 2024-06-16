@@ -5,545 +5,520 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Aqua Pro Services</title>
 
-    <!-- font awesome cdn link -->
+    <!-- Bootstrap Icon CDN -->
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
     />
+
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <!-- CSS resets -->
-    <link rel="stylesheet" href="./styles/reset.css" />
 
     <!-- main css file -->
     <link rel="stylesheet" href="./styles/main.css" />
-
-    <!-- media query css -->
-    <link rel="stylesheet" href="./styles/media-queries.css" />
   </head>
   <body>
     <!-- Header Section -->
-    <header>
-      <!-- Navbar -->
-      <nav class="navbar bg-dark" data-bs-theme="dark">
-        <div class="container-fluid">
-          <!-- Navbar Logo and Brand -->
-          <a class="navbar-brand" href="#">
-            <img
-              src="./assets/logos/brand.svg"
-              alt="brand logo"
-              width="50"
-              height="50"
-              class="d-md-inline-block align-text-top"
-            />
-            <h1 class="d-none d-md-inline-block">Aqua Pro</h1>
-          </a>
 
-          <!-- Navlinks -->
-          <div class="nav-links d-none d-md-flex">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a
-                  class="nav-link text-light active"
-                  aria-current="page"
-                  href="#"
-                  >Home</a
-                >
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#services">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#about">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link text-light" href="#faq">FAQ</a>
-              </li>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top">
+      <div class="container">
+        <!-- Navbar Brand -->
+        <a class="navbar-brand" href="#">
+          <h1>Aqua Pro</h1>
+        </a>
 
-              <!-- custom skewed border -->
-              <div class="custom-skewed-border-right"></div>
+        <!-- Navbar Toogler -->
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navcontent"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-              <!-- Online status section -->
-              <div class="online-status">
-                <span class="text-light"> We're Available </span>
-                <img
-                  src="./assets/logos/online.svg"
-                  alt="green online indicator"
-                />
-                <span class="text-light">11:12 am</span>
-              </div>
+        <!-- Navbar Contents/Menu -->
+        <div class="collapse navbar-collapse" id="navcontent">
+          <ul class="navbar-nav ms-auto me-2">
+            <li class="nav-item">
+              <a href="#" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="#services" class="nav-link">Services</a>
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#FAQ" class="nav-link">FAQ</a>
+            </li>
+          </ul>
+        </div>
 
-              <!-- custom skewed border -->
-              <div class="custom-skewed-border-right"></div>
+        <!-- Navbar Additional Info -->
 
-              <!-- Quote Section -->
-              <div class="flex-row-center btn-container">
-                <button class="text-light quote-btn">
-                  <span class="skew-back"> Get a free Quote </span>
-                </button>
-                <button class="text-light phone-btn">
-                  <span class="skew-back">1300 00 000</span>
-                </button>
-              </div>
-            </ul>
+        <div class="d-none d-xl-flex align-items-center">
+          <!-- custom skewed border -->
+          <div class="custom-skewed-border-right me-3"></div>
+
+          <!-- Online status section -->
+          <div class="online-status">
+            <span class="text-light me-2"> We're Available </span>
+            <img src="./assets/logos/online.svg" alt="green online indicator" />
+            <span class="text-light ms-2">11:12 am</span>
           </div>
 
-          <!-- Navbar Toggle Button -->
-          <button
-            class="navbar-toggler d-block d-md-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <!-- custom skewed border -->
+          <div class="custom-skewed-border-right ms-3"></div>
 
-          <!-- Navbar contents inside the collapsed navbar -->
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-md-none">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Services</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">About</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">FAQ</a>
-              </li>
-              <li class="nav-item">
-                <button class="text-light quote-btn mb-2">
-                  <span class="skew-back"> Get a free Quote </span>
-                </button>
-              </li>
-              <li class="nav-item">
-                <button class="text-light phone-btn">
-                  <span class="skew-back">1300 00 000</span>
-                </button>
-              </li>
-            </ul>
+          <!-- Quote Section -->
+          <div class="btn-container">
+            <button class="btn btn-outline-light me-2 quote-btn">
+              <span class="skew-back"> Get a free Quote </span>
+            </button>
+            <button class="btn btn-outline-light phone-btn">
+              <span class="skew-back">1300 00 000</span>
+            </button>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
+    </nav>
 
-    <!-- Main content -->
-    <main>
-      <!-- Hero section -->
-      <section id="hero" class="hero">
-        <div class="container-fluid">
-          <div class="wrapper-overlay"></div>
-          <div class="row d-flex flex-column flex-lg-row">
-            <!-- column 1 -->
-            <div class="col">
-              <div class="text-white text-center text-uppercase my-5">
-                <!-- Hero Text -->
-                <div>
-                  <h2 class="display-2">Your Local</h2>
-                  <h2 class="display-2">Hot Water</h2>
-                  <h2 class="display-2">Experts</h2>
-                </div>
-
-                <!-- Hero Informations -->
-                <div class="d-flex flex-column gap-3 mt-5">
-                  <!-- info1 -->
-                  <div
-                    class="text-white d-flex flex-column flex-md-row w-100 align-items-center justify-content-center gap-3"
-                  >
-                    <div class="icon-container">
-                      <img src="./assets/logos/tool.svg" alt="tool icon" />
-                    </div>
-                    <div class="d-flex flex-column justify-content-center">
-                      <span class="fs-5">Upfront pricing</span>
-                      <span class="fs-6"
-                        >Know the price of the job before we start.</span
-                      >
-                    </div>
-                  </div>
-
-                  <!-- info2 -->
-                  <div
-                    class="text-white d-flex flex-column flex-md-row w-100 align-items-center justify-content-center gap-3"
-                  >
-                    <div class="icon-container">
-                      <img src="./assets/logos/tool.svg" alt="tool icon" />
-                    </div>
-                    <div class="d-flex flex-column justify-content-center">
-                      <span class="fs-5">Upfront pricing</span>
-                      <span class="fs-6"
-                        >Know the price of the job before we start.</span
-                      >
-                    </div>
-                  </div>
-
-                  <!-- info3 -->
-                  <div
-                    class="text-white d-flex flex-column flex-md-row w-100 align-items-center justify-content-center gap-3"
-                  >
-                    <div class="icon-container">
-                      <img src="./assets/logos/tool.svg" alt="tool icon" />
-                    </div>
-                    <div class="d-flex flex-column justify-content-center">
-                      <span class="fs-5">Upfront pricing</span>
-                      <span class="fs-6"
-                        >Know the price of the job before we start.</span
-                      >
-                    </div>
-                  </div>
-                </div>
-              </div>
+    <!-- Hero section -->
+    <section id="hero" class="showcase text-light text-center p-5 p-lg-0">
+      <div class="showcase-overlay"></div>
+      <div class="container">
+        <div class="d-md-flex align-items-center justify-content-between">
+          <div>
+            <!-- Upper Text -->
+            <div>
+              <h2 class="display-2">YOUR LOCAL</h2>
+              <h2 class="display-2">YOUR LOCAL</h2>
+              <h2 class="display-2">YOUR LOCAL</h2>
             </div>
 
-            <!-- column 2 -->
-            <div class="col">
-              <div class="mt-5 hero-img container">
-                <img
-                  src="./assets/images/technician-banner.png"
-                  class="img-fluid"
-                  alt="technician banner"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="get-quote" class="get-quote">
-        <div class="container-xl mx-auto">
-          <div class="row p-3 d-flex align-items-center justify-content-center">
-            <div class="col-sm-12 col-lg-6 text-center align-self-center">
-              <article>
-                <h3 class="display-3 mb-3">
-                  Request a <span class="light-blue">fast</span>
-                  quote today
-                </h3>
-                <p class="fs-6">
-                  We are industry leaders providing quality plumbing, drainage,
-                  hot water, and roofing-related services to our Community of
-                  Customers. We’re ready to assist you with all your needs. From
-                  routine maintenance to emergency repairs and quality
-                  installations, we have you covered.
-                </p>
-              </article>
-            </div>
-
-            <div
-              class="col-sm-12 col-lg-6 d-flex flex-column flex-lg-row align-items-center"
-            >
-              <article class="mt-5">
-                <div class="outer-parallelogram">
-                  <div class="inner-parallelogram">
-                    <div
-                      class="inner-parallelogram-content d-flex flex-column align-items-center justify-content-center"
-                    >
-                      <h4>$0</h4>
-                      <span>No call</span>
-                      <span>Out fees*</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <div class="container mt-5">
-                <figure>
+            <!-- Lower Text -->
+            <div class="pt-3">
+              <div class="wrapper d-md-flex align-items-center column-gap-4">
+                <div class="img-wrapper">
                   <img
-                    src="./assets/images/phone-hand.png"
-                    alt="phone in the hand"
-                    class="img-fluid"
-                    height="500"
-                    width="500"
+                    src="./assets/logos/tool.svg"
+                    alt="tool icon"
+                    class="img-fluid p-2"
+                    height="60"
+                    width="60"
                   />
-                </figure>
+                </div>
+                <div class="pt-2 d-md-flex flex-column align-items-start">
+                  <h4 class="fw-semibold">Upfront pricing</h4>
+                  <p class="fw-lighter">
+                    Know the price of the job before we start.
+                  </p>
+                </div>
+              </div>
+              <div class="wrapper d-md-flex align-items-center column-gap-4">
+                <img
+                  src="./assets/logos/pipe.svg"
+                  alt="tool icon"
+                  class="img-fluid p-2"
+                  height="60"
+                  width="60"
+                />
+                <div class="pt-2 d-md-flex flex-column align-items-start">
+                  <h4 class="fw-semibold">$0 Call Out</h4>
+                  <p class="fw-lighter">No call out fees.</p>
+                </div>
+              </div>
+              <div class="wrapper d-md-flex align-items-center column-gap-4">
+                <img
+                  src="./assets/logos/tank.svg"
+                  alt="tool icon"
+                  class="img-fluid p-2"
+                  height="60"
+                  width="60"
+                />
+                <div class="pt-2 d-md-flex flex-column align-items-start">
+                  <h4 class="fw-semibold">$50 off for online bookings</h4>
+                  <p class="fw-lighter">Book online to receive a discount.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <img
+            src="./assets/images/technician-banner.png"
+            alt="technician image"
+            class="img-fluid d-none d-lg-block technician-image position-relative"
+          />
+
+          <div
+            class="banners position-absolute d-none d-lg-block d-lg-flex align-items-center justify-content-end gap-4"
+          >
+            <div class="banner facebook-card mb-5">
+              <div class="content">
+                <span class="display-2 rating-number">4.9</span>
+                <div>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <span class="rating-text fw-lighter">Average Ratings</span>
+                <p class="fs-5 fw-semibold">Facebook</p>
+              </div>
+            </div>
+            <div class="banner google-card mb-5">
+              <div class="content">
+                <span class="display-2 rating-number">5.0</span>
+                <div>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                  <i class="bi bi-star"></i>
+                </div>
+                <span class="rating-text fw-lighter">Average Ratings</span>
+                <p class="fs-5 fw-semibold">Google</p>
+              </div>
+            </div>
+            <div class="banner emergency-card mb-5">
+              <div class="content">
+                <span class="display-2 rating-number">24h</span>
+                <p class="fs-5 fw-semibold">Emergency</p>
+                <p class="fs-5 fw-semibold">Services</p>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Form -->
-        <div class="container-lg">
-          <form class="bg-white p-3 shadow-md">
-            <!-- discount coupon -->
-            <div
-              class="yellow-coupon container d-flex justify-content-between align-items-center gap-4"
+    <!-- Quote section -->
+
+    <section class="get-quote p-5 text-center text-lg-start">
+      <div class="container">
+        <div
+          class="d-lg-flex align-items-center column-gap-5 justify-content-between"
+        >
+          <!-- left section -->
+          <div>
+            <h2 class="display-3">
+              Request a <span class="light-blue">fast</span>
+            </h2>
+            <h2 class="display-3">quote today</h2>
+            <p class="lead py-2">
+              We are industry leaders providing quality plumbing, drainage, hot
+              water, and roofing-related services to our Community of Customers.
+              We’re ready to assist you with all your needs. From routine
+              maintenance to emergency repairs and quality installations, we
+              have you covered.
+            </p>
+          </div>
+
+          <!-- right section -->
+          <div class="d-lg-flex align-items-center">
+            <!-- Sticker Box-->
+            <article>
+              <div class="outer-parallelogram">
+                <div class="inner-parallelogram">
+                  <div
+                    class="content d-flex flex-column align-items-center justify-content-center"
+                  >
+                    <h4>$0</h4>
+                    <span>No call</span>
+                    <span>Out fees*</span>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Phone in hand -->
+            <img
+              src="./assets/images/phone-hand.png"
+              alt="hand holding the phone"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="container-lg">
+        <form class="bg-white p-3 shadow-md">
+          <!-- discount coupon -->
+          <div
+            class="yellow-coupon container d-flex justify-content-between align-items-center gap-4"
+          >
+            <div class="col text-center discount-container">
+              <span class="dollar-sign fs-6">$</span>
+              <span class="amount fs-1">50</span>
+              <span class="off-text fs-6">OFF</span>
+            </div>
+            <div class="book-online-text">
+              <p class="h6">When you</p>
+              <p class="h6">book online</p>
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label"
+              >Email address</label
             >
-              <div class="col text-center discount-container">
-                <span class="dollar-sign fs-6">$</span>
-                <span class="amount fs-1">50</span>
-                <span class="off-text fs-6">OFF</span>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label"
+              >Password</label
+            >
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1"
+              >Check me out</label
+            >
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- service section -->
+    <section id="services" class="services bg-white p-3">
+      <article class="text-center container">
+        <h3 class="display-3 mb-3">
+          Plumbing <span class="light-blue">services</span>
+          we offer
+        </h3>
+        <p class="fs-6 px-md-5">
+          We are industry leaders providing quality plumbing, drainage, hot
+          water, and roofing-related services to our Community of Customers.
+        </p>
+      </article>
+
+      <div class="container-lg mt-4">
+        <div class="row">
+          <!-- Row 1 -->
+          <div class="col-sm-6 col-xl-3 mb-4">
+            <div class="placeholder-box">
+              <div class="placeholder-box-title">
+                <div class="wrapper">
+                  <img
+                    src="./assets/images/plumbing-white.png"
+                    alt="plumbing logo"
+                    height="50"
+                    width="50"
+                  />
+                  <span class="text-white">Blocked Drains</span>
+                </div>
               </div>
-              <div class="book-online-text">
-                <p class="h6">When you</p>
-                <p class="h6">book online</p>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3 mb-4">
+            <div class="placeholder-box">
+              <div class="placeholder-box-title">
+                <div class="wrapper">
+                  <img
+                    src="./assets/images/plumbing-white.png"
+                    alt="plumbing logo"
+                    height="50"
+                    width="50"
+                  />
+                  <span class="text-white">hot water</span>
+                </div>
               </div>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label"
-                >Email address</label
-              >
-              <input
-                type="email"
-                class="form-control"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-              />
-              <div id="emailHelp" class="form-text">
-                We'll never share your email with anyone else.
+          </div>
+          <div class="col-sm-6 col-xl-3 mb-4">
+            <div class="placeholder-box">
+              <div class="placeholder-box-title">
+                <div class="wrapper">
+                  <img
+                    src="./assets/images/plumbing-white.png"
+                    alt="plumbing logo"
+                    height="50"
+                    width="50"
+                  />
+                  <span class="text-white">leaking pipes</span>
+                </div>
               </div>
             </div>
-            <div class="mb-3">
-              <label for="exampleInputPassword1" class="form-label"
-                >Password</label
-              >
-              <input
-                type="password"
-                class="form-control"
-                id="exampleInputPassword1"
-              />
+          </div>
+          <div class="col-sm-6 col-xl-3 mb-4">
+            <div class="placeholder-box">
+              <div class="placeholder-box-title">
+                <div class="wrapper">
+                  <img
+                    src="./assets/images/plumbing-white.png"
+                    alt="plumbing logo"
+                    height="50"
+                    width="50"
+                  />
+                  <span class="text-white">gas fitting</span>
+                </div>
+              </div>
             </div>
-            <div class="mb-3 form-check">
-              <input
-                type="checkbox"
-                class="form-check-input"
-                id="exampleCheck1"
-              />
-              <label class="form-check-label" for="exampleCheck1"
-                >Check me out</label
-              >
+          </div>
+
+          <!-- Row 2 -->
+          <div class="col-sm-6 col-xl-3 mb-4">
+            <div class="placeholder-box">
+              <div class="placeholder-box-title">
+                <div class="wrapper">
+                  <img
+                    src="./assets/images/plumbing-white.png"
+                    alt="plumbing logo"
+                    height="50"
+                    width="50"
+                  />
+                  <span class="text-white">leaking taps</span>
+                </div>
+              </div>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </form>
+          </div>
+          <div class="col-sm-6 col-xl-3 mb-4">
+            <div class="placeholder-box">
+              <div class="placeholder-box-title">
+                <div class="wrapper">
+                  <img
+                    src="./assets/images/plumbing-white.png"
+                    alt="plumbing logo"
+                    height="50"
+                    width="50"
+                  />
+                  <span class="text-white">pipe relining</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3 mb-4">
+            <div class="placeholder-box">
+              <div class="placeholder-box-title">
+                <div class="wrapper">
+                  <img
+                    src="./assets/images/plumbing-white.png"
+                    alt="plumbing logo"
+                    height="50"
+                    width="50"
+                  />
+                  <span class="text-white">leaking toilets</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-xl-3 mb-4">
+            <div class="placeholder-box">
+              <div class="placeholder-box-title">
+                <div class="wrapper">
+                  <img
+                    src="./assets/images/plumbing-white.png"
+                    alt="plumbing logo"
+                    height="50"
+                    width="50"
+                  />
+                  <span class="text-white">leak detection</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
 
-      <section id="services" class="services bg-white p-3">
-        <article class="text-center container">
-          <h3 class="display-3 mb-3">
-            Plumbing <span class="light-blue">services</span>
-            we offer
-          </h3>
-          <p class="fs-6 px-md-5">
-            We are industry leaders providing quality plumbing, drainage, hot
-            water, and roofing-related services to our Community of Customers.
-          </p>
-        </article>
+      <div class="container-lg brands-container">
+        <!-- Row1 -->
+        <div class="row">
+          <div class="col-sm-12 col-md-6">
+            <h4 class="fs-6 text-center">We use well known brands including</h4>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <hr />
+          </div>
+        </div>
 
-        <div class="container-lg mt-4">
+        <!-- Row2 -->
+
+        <div class="container">
           <div class="row">
-            <!-- Row 1 -->
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="placeholder-box">
-                <div class="placeholder-box-title">
-                  <div class="wrapper">
-                    <img
-                      src="./assets/images/plumbing-white.png"
-                      alt="plumbing logo"
-                      height="50"
-                      width="50"
-                    />
-                    <span class="text-white">Blocked Drains</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="placeholder-box">
-                <div class="placeholder-box-title">
-                  <div class="wrapper">
-                    <img
-                      src="./assets/images/plumbing-white.png"
-                      alt="plumbing logo"
-                      height="50"
-                      width="50"
-                    />
-                    <span class="text-white">hot water</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="placeholder-box">
-                <div class="placeholder-box-title">
-                  <div class="wrapper">
-                    <img
-                      src="./assets/images/plumbing-white.png"
-                      alt="plumbing logo"
-                      height="50"
-                      width="50"
-                    />
-                    <span class="text-white">leaking pipes</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="placeholder-box">
-                <div class="placeholder-box-title">
-                  <div class="wrapper">
-                    <img
-                      src="./assets/images/plumbing-white.png"
-                      alt="plumbing logo"
-                      height="50"
-                      width="50"
-                    />
-                    <span class="text-white">gas fitting</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- Row 2 -->
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="placeholder-box">
-                <div class="placeholder-box-title">
-                  <div class="wrapper">
-                    <img
-                      src="./assets/images/plumbing-white.png"
-                      alt="plumbing logo"
-                      height="50"
-                      width="50"
-                    />
-                    <span class="text-white">leaking taps</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="placeholder-box">
-                <div class="placeholder-box-title">
-                  <div class="wrapper">
-                    <img
-                      src="./assets/images/plumbing-white.png"
-                      alt="plumbing logo"
-                      height="50"
-                      width="50"
-                    />
-                    <span class="text-white">pipe relining</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="placeholder-box">
-                <div class="placeholder-box-title">
-                  <div class="wrapper">
-                    <img
-                      src="./assets/images/plumbing-white.png"
-                      alt="plumbing logo"
-                      height="50"
-                      width="50"
-                    />
-                    <span class="text-white">leaking toilets</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="col-sm-6 col-xl-3 mb-4">
-              <div class="placeholder-box">
-                <div class="placeholder-box-title">
-                  <div class="wrapper">
-                    <img
-                      src="./assets/images/plumbing-white.png"
-                      alt="plumbing logo"
-                      height="50"
-                      width="50"
-                    />
-                    <span class="text-white">leak detection</span>
-                  </div>
-                </div>
-              </div>
+            <div class="col-sm-12 logo-container">
+              <img
+                src="./assets/images/vulcan.jpg"
+                alt="vulcan logo"
+                class="img-fluid"
+                height="100"
+                width="100"
+              />
+              <img
+                src="./assets/images/thermann.png"
+                alt="thermann logo"
+                class="img-fluid"
+                height="100"
+                width="100"
+              />
+              <img
+                src="./assets/images/parisi.jpg"
+                alt="parisi logo"
+                class="img-fluid"
+                height="100"
+                width="100"
+              />
+              <img
+                src="./assets/images/grohe.png"
+                alt="grohe logo"
+                class="img-fluid"
+                height="100"
+                width="100"
+              />
+              <img
+                src="./assets/images/DUX.jpg"
+                alt="DUX logo"
+                class="img-fluid"
+                height="100"
+                width="100"
+              />
+              <img
+                src="./assets/images/aquamax.jpg"
+                alt="aquamax logo"
+                class="img-fluid"
+                height="100"
+                width="100"
+              />
+              <img
+                src="./assets/images/rheem.png"
+                alt="rheem logo"
+                class="img-fluid"
+                height="100"
+                width="100"
+              />
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <div class="container-lg brands-container">
-          <!-- Row1 -->
-          <div class="row">
-            <div class="col-sm-12 col-md-6">
-              <h4 class="fs-6 text-center">
-                We use well known brands including
-              </h4>
-            </div>
-            <div class="col-sm-12 col-md-6">
-              <hr />
-            </div>
-          </div>
-
-          <!-- Row2 -->
-
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12 logo-container">
-                <img
-                  src="./assets/images/vulcan.jpg"
-                  alt="vulcan logo"
-                  class="img-fluid"
-                  height="100"
-                  width="100"
-                />
-                <img
-                  src="./assets/images/thermann.png"
-                  alt="thermann logo"
-                  class="img-fluid"
-                  height="100"
-                  width="100"
-                />
-                <img
-                  src="./assets/images/parisi.jpg"
-                  alt="parisi logo"
-                  class="img-fluid"
-                  height="100"
-                  width="100"
-                />
-                <img
-                  src="./assets/images/grohe.png"
-                  alt="grohe logo"
-                  class="img-fluid"
-                  height="100"
-                  width="100"
-                />
-                <img
-                  src="./assets/images/DUX.jpg"
-                  alt="DUX logo"
-                  class="img-fluid"
-                  height="100"
-                  width="100"
-                />
-                <img
-                  src="./assets/images/aquamax.jpg"
-                  alt="aquamax logo"
-                  class="img-fluid"
-                  height="100"
-                  width="100"
-                />
-                <img
-                  src="./assets/images/rheem.png"
-                  alt="rheem logo"
-                  class="img-fluid"
-                  height="100"
-                  width="100"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer>
-      <!-- Footer content -->
-    </footer>
     <!-- bootstrap JS file -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
