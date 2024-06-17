@@ -7,7 +7,7 @@
   --bg-gray: rgba(162, 162, 162, 0.412);
   --light-blue: #00a6e8f0;
   --dark-blue: #0a64ff;
-  --dark-yellow: #f6d100;
+  --dark-yellow: #ffd856;
   --navy-blue: #192a53;
   --skew-angle: -10deg;
   --skew-angle-opposite: 10deg;
@@ -142,7 +142,7 @@ body::before {
 
 .banners .banner {
   color: white;
-  padding: 1rem 1.5rem;
+  padding: 0.8rem 1.3rem;
 }
 .banner.google-card {
   background-color: rgb(215, 19, 19);
@@ -167,6 +167,18 @@ body::before {
 }
 
 /* Quote Section */
+
+.sticker {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.phone-image {
+  max-width: 330px;
+  height: auto;
+}
+
 .outer-parallelogram {
   height: 180px;
   width: 180px;
@@ -179,7 +191,7 @@ body::before {
 .inner-parallelogram {
   height: 150px;
   width: 150px;
-  border: 3px dashed white;
+  border: 4px dashed white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -190,27 +202,44 @@ body::before {
 .inner-parallelogram .content {
   font-weight: 600;
   transform: skew(var(--skew-angle-opposite));
-}
-
-.inner-parallelogram h4 {
-  font-size: 3rem;
-  font-weight: 800;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .light-blue {
   color: var(--light-blue);
 }
 
-.get-quote .display-3,
-.services .display-3 {
-  font-weight: 700;
+/* Form section */
+
+.form {
+  transform: translateY(-3px);
 }
 
-.get-quote form {
-  margin: 0rem auto;
-  transform: translateY(20%);
-  border: 1px solid rgba(128, 128, 128, 0.157);
-  position: relative;
+.form .custom-container {
+  max-width: 1400px;
+  margin-inline: auto;
+}
+
+.form span.info {
+  font-size: 0.8rem;
+}
+
+form button[type="submit"] {
+  background-color: var(--light-blue);
+  color: white;
+  width: 100%;
+  font-weight: 400;
+  font-size: 0.8rem;
+}
+
+form input.form-control,
+button[type="submit"] {
+  border-radius: 0;
+  padding: 0.8rem;
+  font-size: 0.8rem;
 }
 
 .yellow-coupon {
@@ -218,7 +247,7 @@ body::before {
   width: 300px;
   background-color: var(--dark-yellow);
   position: absolute;
-  bottom: -80px;
+  bottom: -32px;
   left: 50%;
   transform: translateX(-50%);
   left: 30;
@@ -234,53 +263,10 @@ body::before {
   );
 }
 
-/* services */
-.placeholder-box {
-  height: 200px;
-  width: 100%;
-  background-color: gray;
-  position: relative;
-}
-
-.placeholder-box-title {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-}
-
-.placeholder-box-title img {
-  background-color: var(--light-blue);
-  padding: 0.6rem;
-}
-
-.placeholder-box-title .wrapper {
-  display: flex;
-  width: 100%;
-}
-
-.placeholder-box-title span {
-  clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
-  background-color: var(--navy-blue);
-  width: 60%;
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  text-transform: uppercase;
-  font-weight: 600;
-  font-size: 0.8rem;
-  padding-left: 1rem;
-}
-
-.services h3 {
-  margin-top: 10rem;
-}
-
 .discount-container {
-  border: 2px dashed white;
+  border: 3px dashed white;
   display: flex;
   justify-content: center;
-  column-gap: 0.5rem;
   font-weight: 800;
 }
 
@@ -293,36 +279,67 @@ body::before {
 }
 
 .book-online-text p {
-  font-weight: 800;
+  font-weight: 700;
   margin-bottom: -1px;
 }
 
 .off-text {
+  padding-top: 0.6rem;
   transform: rotate(-90deg);
 }
 
-.brands-container h4 {
-  font-weight: 700;
+/* services */
+.placeholder-box {
+  height: 230px;
+  width: 100%;
+  background-color: gray;
+  position: relative;
+}
+
+.placeholder-box-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+}
+
+.placeholder-box-title .box {
+  background-color: var(--light-blue);
+  padding: 0.7rem;
+}
+
+.placeholder-box-title span {
+  clip-path: polygon(0 0, 93% 0, 100% 100%, 0% 100%);
+  background-color: var(--navy-blue);
+  width: 60%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 0.8rem;
+  padding-left: 1rem;
+}
+
+.services h2 {
+  margin-top: 5rem;
+}
+
+.custom-line {
+  height: 1px;
+  background-color: rgba(0, 0, 0, 0.339);
+  width: 100%;
 }
 
 .logo-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  column-gap: 3rem;
 }
 
 .logo-container img {
-  flex: 1;
+  width: 100px;
 }
-
-/* @media (min-width: 1200px) {
-  .banners {
-    right: 20px;
-  }
-}
-@media (min-width: 1400px) {
-  .banners {
-    right: 80px;
-  }
-} */

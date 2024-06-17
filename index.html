@@ -20,6 +20,9 @@
 
     <!-- main css file -->
     <link rel="stylesheet" href="./styles/main.css" />
+
+    <!-- media queries css file -->
+    <link rel="stylesheet" href="./styles/media-queries.css" />
   </head>
   <body>
     <!-- Header Section -->
@@ -93,7 +96,10 @@
     </nav>
 
     <!-- Hero section -->
-    <section id="hero" class="showcase text-light text-center p-5 p-lg-0">
+    <section
+      id="hero"
+      class="showcase text-light text-center p-5 p-lg-0 mt-lg-3"
+    >
       <div class="showcase-overlay"></div>
       <div class="container">
         <div class="d-md-flex align-items-center justify-content-between">
@@ -101,8 +107,8 @@
             <!-- Upper Text -->
             <div>
               <h2 class="display-2">YOUR LOCAL</h2>
-              <h2 class="display-2">YOUR LOCAL</h2>
-              <h2 class="display-2">YOUR LOCAL</h2>
+              <h2 class="display-2">HOT WATER</h2>
+              <h2 class="display-2">EXPERTS</h2>
             </div>
 
             <!-- Lower Text -->
@@ -156,7 +162,7 @@
           <img
             src="./assets/images/technician-banner.png"
             alt="technician image"
-            class="img-fluid d-none d-lg-block technician-image position-relative"
+            class="img-fluid d-none w-75 d-lg-block technician-image position-relative"
           />
 
           <div
@@ -204,17 +210,17 @@
 
     <!-- Quote section -->
 
-    <section class="get-quote p-5 text-center text-lg-start">
+    <section class="get-quote p-5 p text-center">
       <div class="container">
         <div
           class="d-lg-flex align-items-center column-gap-5 justify-content-between"
         >
           <!-- left section -->
-          <div>
-            <h2 class="display-3">
+          <div class="text-lg-start">
+            <h2 class="display-3 fw-bold">
               Request a <span class="light-blue">fast</span>
             </h2>
-            <h2 class="display-3">quote today</h2>
+            <h2 class="display-3 fw-bold text-nowrap">quote today</h2>
             <p class="lead py-2">
               We are industry leaders providing quality plumbing, drainage, hot
               water, and roofing-related services to our Community of Customers.
@@ -225,293 +231,329 @@
           </div>
 
           <!-- right section -->
-          <div class="d-lg-flex align-items-center">
+          <div class="d-lg-flex">
             <!-- Sticker Box-->
-            <article>
+            <article class="sticker">
               <div class="outer-parallelogram">
                 <div class="inner-parallelogram">
-                  <div
-                    class="content d-flex flex-column align-items-center justify-content-center"
-                  >
-                    <h4>$0</h4>
-                    <span>No call</span>
-                    <span>Out fees*</span>
+                  <div class="content">
+                    <h4 class="display-2 fw-bold">$0</h4>
+                    <span class="fw-light">No call</span>
+                    <span class="fw-light">Out fees*</span>
                   </div>
                 </div>
               </div>
             </article>
 
             <!-- Phone in hand -->
-            <img
-              src="./assets/images/phone-hand.png"
-              alt="hand holding the phone"
-              class="img-fluid"
-            />
+            <div class="mt-5">
+              <img
+                src="./assets/images/phone-hand.png"
+                alt="hand holding the phone"
+                class="img-fluid phone-image"
+              />
+            </div>
           </div>
         </div>
       </div>
+    </section>
 
-      <!-- Form -->
-      <div class="container-lg">
-        <form class="bg-white p-3 shadow-md">
-          <!-- discount coupon -->
-          <div
-            class="yellow-coupon container d-flex justify-content-between align-items-center gap-4"
-          >
-            <div class="col text-center discount-container">
-              <span class="dollar-sign fs-6">$</span>
-              <span class="amount fs-1">50</span>
-              <span class="off-text fs-6">OFF</span>
-            </div>
-            <div class="book-online-text">
-              <p class="h6">When you</p>
-              <p class="h6">book online</p>
-            </div>
+    <!-- Form Section-->
+    <section class="form p-5 text-center p-lg-0">
+      <div class="container bg-white shadow-sm p-5">
+        <!-- First Row -->
+        <div class="row d-md-flex align-items-center mb-3">
+          <!-- Col 1 -->
+          <div class="col-12 col-lg-3 mb-2 me-auto flex-grow-1">
+            <h3 class="fs-5 fw-semibold text-lg-start">
+              Describe your <span class="light-blue">plumbing</span> requirement
+              to get a quote
+            </h3>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label"
-              >Email address</label
+
+          <!-- Col2 -->
+          <div
+            class="col-12 col-lg-3 mb-2 d-md-flex align-items-center column-gap-2 justify-content-center"
+          >
+            <i
+              class="bi bi-lock-fill text-success d-flex align-items-center justify-content-center"
+            ></i>
+            <span class="info">Your information is 100% safe and secure</span>
+          </div>
+
+          <!-- Col 3 -->
+          <div
+            class="col-12 col-lg-3 mb-2 d-md-flex align-items-center column-gap-2 justify-content-center"
+          >
+            <i
+              class="bi bi-lock-fill text-success d-flex align-items-center justify-content-center"
+            ></i>
+            <span class="info"
+              >You will recieve a response within minutues</span
             >
+          </div>
+        </div>
+
+        <!-- form -->
+        <form class="row g-3">
+          <div class="col-md-3">
             <input
               type="email"
               class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              id="email"
+              placeholder="Name"
             />
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
-            </div>
           </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label"
-              >Password</label
-            >
+          <div class="col-md-3">
             <input
-              type="password"
+              type="number"
               class="form-control"
-              id="exampleInputPassword1"
+              id="phone"
+              placeholder="Phone Number"
             />
           </div>
-          <div class="mb-3 form-check">
+          <div class="col-md-3">
             <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
+              type="text"
+              class="form-control"
+              id="email"
+              placeholder="Email Address"
             />
-            <label class="form-check-label" for="exampleCheck1"
-              >Check me out</label
-            >
           </div>
-          <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="col-md-3">
+            <input
+              type="text"
+              class="form-control"
+              id="address"
+              placeholder="Suburb"
+            />
+          </div>
+          <div class="col-md-3">
+            <input
+              type="text"
+              class="form-control"
+              id="serviceType"
+              placeholder="Service Type:"
+            />
+          </div>
+          <div class="col-md-6">
+            <input
+              type="text"
+              class="form-control"
+              id="job"
+              placeholder="Describe Plumbing Job"
+            />
+          </div>
+          <div class="col-md-3">
+            <button type="submit" class="btn">Get a free quote</button>
+          </div>
         </form>
+      </div>
+      <!-- discount coupon -->
+      <div
+        class="yellow-coupon container d-flex justify-content-between align-items-center gap-3"
+      >
+        <div class="col text-center discount-container">
+          <span class="dollar-sign fs-3 fw-semibold">$</span>
+          <span class="amount fs-1">50</span>
+          <span class="off-text fs-5 fw-bolder">OFF</span>
+        </div>
+        <div class="book-online-text">
+          <p class="h6">When you</p>
+          <p class="h6">book online</p>
+        </div>
       </div>
     </section>
 
     <!-- service section -->
-    <section id="services" class="services bg-white p-3">
-      <article class="text-center container">
-        <h3 class="display-3 mb-3">
-          Plumbing <span class="light-blue">services</span>
-          we offer
-        </h3>
-        <p class="fs-6 px-md-5">
-          We are industry leaders providing quality plumbing, drainage, hot
-          water, and roofing-related services to our Community of Customers.
-        </p>
-      </article>
+    <section id="services" class="p-5 text-center bg-white">
+      <div class="container">
+        <!-- header section -->
+        <div>
+          <h2 class="display-3 fw-semibold mt-5">
+            Plumbing <span class="light-blue">services</span> we offer
+          </h2>
+          <p class="lead">
+            We are industry leaders providing quality plumbing, drainage, hot
+            water, and roofing-related services to our Community of Customers.
+          </p>
+        </div>
 
-      <div class="container-lg mt-4">
-        <div class="row">
-          <!-- Row 1 -->
-          <div class="col-sm-6 col-xl-3 mb-4">
-            <div class="placeholder-box">
-              <div class="placeholder-box-title">
-                <div class="wrapper">
-                  <img
-                    src="./assets/images/plumbing-white.png"
-                    alt="plumbing logo"
-                    height="50"
-                    width="50"
-                  />
-                  <span class="text-white">Blocked Drains</span>
+        <!-- Cards Section -->
+        <div class="mt-4">
+          <div class="row g-3">
+            <div class="col-md-6 col-xl-3">
+              <div class="placeholder-box">
+                <div class="placeholder-box-title">
+                  <div class="box">
+                    <img
+                      src="./assets/images/plumbing-white.png"
+                      alt="plumbing logo"
+                      height="35"
+                      width="35"
+                    />
+                  </div>
+                  <span class="text-white">blocked drains</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-xl-3 mb-4">
-            <div class="placeholder-box">
-              <div class="placeholder-box-title">
-                <div class="wrapper">
-                  <img
-                    src="./assets/images/plumbing-white.png"
-                    alt="plumbing logo"
-                    height="50"
-                    width="50"
-                  />
+            <div class="col-md-6 col-xl-3">
+              <div class="placeholder-box">
+                <div class="placeholder-box-title">
+                  <div class="box">
+                    <img
+                      src="./assets/images/plumbing-white.png"
+                      alt="plumbing logo"
+                      height="35"
+                      width="35"
+                    />
+                  </div>
                   <span class="text-white">hot water</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-xl-3 mb-4">
-            <div class="placeholder-box">
-              <div class="placeholder-box-title">
-                <div class="wrapper">
-                  <img
-                    src="./assets/images/plumbing-white.png"
-                    alt="plumbing logo"
-                    height="50"
-                    width="50"
-                  />
+            <div class="col-md-6 col-xl-3">
+              <div class="placeholder-box">
+                <div class="placeholder-box-title">
+                  <div class="box">
+                    <img
+                      src="./assets/images/plumbing-white.png"
+                      alt="plumbing logo"
+                      height="35"
+                      width="35"
+                    />
+                  </div>
                   <span class="text-white">leaking pipes</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-xl-3 mb-4">
-            <div class="placeholder-box">
-              <div class="placeholder-box-title">
-                <div class="wrapper">
-                  <img
-                    src="./assets/images/plumbing-white.png"
-                    alt="plumbing logo"
-                    height="50"
-                    width="50"
-                  />
+            <div class="col-md-6 col-xl-3">
+              <div class="placeholder-box">
+                <div class="placeholder-box-title">
+                  <div class="box">
+                    <img
+                      src="./assets/images/plumbing-white.png"
+                      alt="plumbing logo"
+                      height="35"
+                      width="35"
+                    />
+                  </div>
                   <span class="text-white">gas fitting</span>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Row 2 -->
-          <div class="col-sm-6 col-xl-3 mb-4">
-            <div class="placeholder-box">
-              <div class="placeholder-box-title">
-                <div class="wrapper">
-                  <img
-                    src="./assets/images/plumbing-white.png"
-                    alt="plumbing logo"
-                    height="50"
-                    width="50"
-                  />
+            <div class="col-md-6 col-xl-3">
+              <div class="placeholder-box">
+                <div class="placeholder-box-title">
+                  <div class="box">
+                    <img
+                      src="./assets/images/plumbing-white.png"
+                      alt="plumbing logo"
+                      height="35"
+                      width="35"
+                    />
+                  </div>
                   <span class="text-white">leaking taps</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-xl-3 mb-4">
-            <div class="placeholder-box">
-              <div class="placeholder-box-title">
-                <div class="wrapper">
-                  <img
-                    src="./assets/images/plumbing-white.png"
-                    alt="plumbing logo"
-                    height="50"
-                    width="50"
-                  />
+            <div class="col-md-6 col-xl-3">
+              <div class="placeholder-box">
+                <div class="placeholder-box-title">
+                  <div class="box">
+                    <img
+                      src="./assets/images/plumbing-white.png"
+                      alt="plumbing logo"
+                      height="35"
+                      width="35"
+                    />
+                  </div>
                   <span class="text-white">pipe relining</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-xl-3 mb-4">
-            <div class="placeholder-box">
-              <div class="placeholder-box-title">
-                <div class="wrapper">
-                  <img
-                    src="./assets/images/plumbing-white.png"
-                    alt="plumbing logo"
-                    height="50"
-                    width="50"
-                  />
+            <div class="col-md-6 col-xl-3">
+              <div class="placeholder-box">
+                <div class="placeholder-box-title">
+                  <div class="box">
+                    <img
+                      src="./assets/images/plumbing-white.png"
+                      alt="plumbing logo"
+                      height="35"
+                      width="35"
+                    />
+                  </div>
                   <span class="text-white">leaking toilets</span>
                 </div>
               </div>
             </div>
-          </div>
-          <div class="col-sm-6 col-xl-3 mb-4">
-            <div class="placeholder-box">
-              <div class="placeholder-box-title">
-                <div class="wrapper">
-                  <img
-                    src="./assets/images/plumbing-white.png"
-                    alt="plumbing logo"
-                    height="50"
-                    width="50"
-                  />
+            <div class="col-md-6 col-xl-3">
+              <div class="placeholder-box">
+                <div class="placeholder-box-title">
+                  <div class="box">
+                    <img
+                      src="./assets/images/plumbing-white.png"
+                      alt="plumbing logo"
+                      height="35"
+                      width="35"
+                    />
+                  </div>
                   <span class="text-white">leak detection</span>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
 
-      <div class="container-lg brands-container">
-        <!-- Row1 -->
-        <div class="row">
-          <div class="col-sm-12 col-md-6">
-            <h4 class="fs-6 text-center">We use well known brands including</h4>
+          <!-- Row containing para and line -->
+          <div class="row mt-4">
+            <div class="col">
+              <div class="d-lg-flex align-items-center">
+                <p class="fs-5 fw-semibold mb-2 mb-lg-0">
+                  We use well known brands including
+                </p>
+                <div class="custom-line ms-auto"></div>
+              </div>
+            </div>
           </div>
-          <div class="col-sm-12 col-md-6">
-            <hr />
-          </div>
-        </div>
 
-        <!-- Row2 -->
-
-        <div class="container">
+          <!-- Brand logos -->
           <div class="row">
-            <div class="col-sm-12 logo-container">
+            <div class="container logo-container mt-3">
               <img
                 src="./assets/images/vulcan.jpg"
                 alt="vulcan logo"
                 class="img-fluid"
-                height="100"
-                width="100"
               />
               <img
                 src="./assets/images/thermann.png"
                 alt="thermann logo"
                 class="img-fluid"
-                height="100"
-                width="100"
               />
               <img
                 src="./assets/images/parisi.jpg"
                 alt="parisi logo"
                 class="img-fluid"
-                height="100"
-                width="100"
               />
               <img
                 src="./assets/images/grohe.png"
                 alt="grohe logo"
                 class="img-fluid"
-                height="100"
-                width="100"
               />
               <img
                 src="./assets/images/DUX.jpg"
-                alt="DUX logo"
+                alt="dux logo"
                 class="img-fluid"
-                height="100"
-                width="100"
               />
               <img
                 src="./assets/images/aquamax.jpg"
                 alt="aquamax logo"
                 class="img-fluid"
-                height="100"
-                width="100"
               />
+
               <img
                 src="./assets/images/rheem.png"
                 alt="rheem logo"
                 class="img-fluid"
-                height="100"
-                width="100"
               />
             </div>
           </div>
