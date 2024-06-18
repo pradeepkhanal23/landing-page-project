@@ -9,8 +9,8 @@
   --dark-blue: #0a64ff;
   --dark-yellow: #ffd856;
   --navy-blue: #192a53;
-  --skew-angle: -10deg;
-  --skew-angle-opposite: 10deg;
+  --skew-angle: -8deg;
+  --skew-angle-opposite: 8deg;
 }
 
 body {
@@ -19,10 +19,35 @@ body {
   font-family: var(--font);
 }
 
+/* adding extra space at the top because having fixed navbar at the top pushes the othe contents down */
 body::before {
   display: block;
   content: "";
   height: 4rem;
+}
+
+/* custom utility classes */
+.dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.skew {
+  transform: skew(var(--skew-angle));
+}
+.skew-back {
+  transform: skew(var(--skew-angle-opposite));
+}
+
+.navy-blue {
+  background-color: var(--navy-blue);
+}
+
+.light-blue {
+  color: var(--light-blue);
+}
+
+.bg-lightblue {
+  background-color: var(--light-blue);
 }
 
 /* -----------------------------NAVBAR SECTION------------------------------------------------------------------ */
@@ -208,10 +233,6 @@ body::before {
   justify-content: center;
 }
 
-.light-blue {
-  color: var(--light-blue);
-}
-
 /* Form section */
 
 .form {
@@ -342,4 +363,31 @@ button[type="submit"] {
 
 .logo-container img {
   width: 100px;
+}
+
+section.free-quote {
+  color: white;
+}
+
+.btn-navy,
+.btn-free {
+  padding: 0.8rem 2rem;
+  border-radius: 0;
+  margin: 0.5rem;
+  font-weight: 600;
+}
+
+.btn-free {
+  background-color: white;
+  color: var(--light-blue);
+}
+
+/* provided såervices section */
+.cards .card {
+  border-radius: 0;
+  max-width: 18rem;
+}
+.card .card-title,
+.card-text {
+  text-align: left;
 }

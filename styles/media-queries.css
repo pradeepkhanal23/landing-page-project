@@ -15,6 +15,10 @@
   .custom-line {
     width: 50%;
   }
+
+  .navy-blue {
+    clip-path: polygon(4% 0, 100% 0%, 100% 99%, 0% 100%);
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
