@@ -4,6 +4,10 @@
 
 /* Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+  .cards {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */
@@ -17,7 +21,7 @@
   }
 
   .navy-blue {
-    clip-path: polygon(4% 0, 100% 0%, 100% 99%, 0% 100%);
+    clip-path: polygon(4% 0, 100% 0%, 100% 100%, 0% 100%);
   }
 }
 
@@ -32,8 +36,15 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .cards {
+    justify-content: start;
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1400px) {
+  .provided-services article {
+    padding-left: 8rem;
+  }
 }
