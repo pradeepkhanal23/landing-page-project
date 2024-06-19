@@ -40,6 +40,31 @@
   .cards {
     justify-content: start;
   }
+
+  .provided-services img.plumber-image {
+    z-index: 1;
+  }
+
+  .payment .first-row {
+    padding: 2rem 5rem;
+  }
+
+  section.provided-services {
+    z-index: 1;
+  }
+
+  section.payment {
+    padding: 2rem 7rem;
+    margin-top: -70px;
+    z-index: 2;
+    position: relative;
+  }
+
+  .hand-img {
+    position: absolute;
+    bottom: 32px;
+    right: 20px;
+  }
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */

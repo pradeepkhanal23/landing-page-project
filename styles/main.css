@@ -384,10 +384,6 @@ section.free-quote {
 
 /* provided services section */
 
-section.provided-services {
-  max-height: auto;
-}
-
 .provided-services img.plumber-image {
   height: 100%;
   object-fit: cover;
@@ -438,4 +434,23 @@ section.provided-services {
   font-size: 1.9rem;
   color: var(--light-blue);
   align-self: start;
+}
+
+/* Payment section */
+.payment {
+  margin-top: 0.5rem;
+  position: relative;
+}
+
+.payment .first-row {
+  background-color: var(--navy-blue);
+  display: flex;
+  align-items: center;
+}
+
+section.payment .first-row img.aqua-pro {
+  object-fit: contain;
+  border-radius: 50%;
+  height: 140px;
+  width: 140px;
 }
