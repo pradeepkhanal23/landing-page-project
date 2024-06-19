@@ -60,11 +60,11 @@
     position: relative;
   }
 
-  .hand-img {
+  /* .hand-img {
     position: absolute;
     bottom: 32px;
     right: 20px;
-  }
+  } */
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
