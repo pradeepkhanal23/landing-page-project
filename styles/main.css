@@ -42,6 +42,10 @@ body::before {
   background-color: var(--navy-blue);
 }
 
+.bg-navyblue {
+  background-color: var(--navy-blue);
+}
+
 .light-blue {
   color: var(--light-blue);
 }
@@ -438,19 +442,87 @@ section.free-quote {
 
 /* Payment section */
 .payment {
-  margin-top: 0.5rem;
   position: relative;
+}
+.payment .banner-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .payment .first-row {
   background-color: var(--navy-blue);
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+}
+
+.payment .second-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.payment .second-row .step-card {
+  flex: 1;
 }
 
 section.payment .first-row img.aqua-pro {
   object-fit: contain;
   border-radius: 50%;
-  height: 140px;
-  width: 140px;
+  height: 150px;
+  width: 150px;
+}
+
+/* Accordian */
+
+.accordion-button::after {
+  display: none;
+}
+
+button.accordion-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: 600;
+  background-color: var(--bg-color);
+}
+
+.accordion-button span {
+  margin-left: auto;
+}
+
+.accordion-button .plus-sign {
+  display: inline;
+}
+
+.accordion-button .minus-sign {
+  display: none;
+}
+
+.accordion-button.collapsed .plus-sign {
+  display: inline;
+}
+
+.accordion-button.collapsed .minus-sign {
+  display: none;
+}
+
+.accordion-button:not(.collapsed) .plus-sign {
+  display: none;
+}
+
+.accordion-button:not(.collapsed) .minus-sign {
+  display: inline;
+}
+
+.accordion-header {
+  min-height: 60px;
+}
+
+.accordion-body {
+  text-align: left;
 }
