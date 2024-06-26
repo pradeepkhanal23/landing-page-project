@@ -8,6 +8,11 @@
     flex-direction: row;
     justify-content: center;
   }
+
+  .footer-text {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* Large devices (desktops, 992px and up) */

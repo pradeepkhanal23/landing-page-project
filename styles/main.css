@@ -581,3 +581,36 @@ section.cta img.aqua-pro {
 .booking .additional-info span {
   font-size: 0.8rem;
 }
+
+/* footer */
+.footer {
+  background-color: var(--navy-blue);
+  color: white;
+}
+
+.footer-row {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer img.aqua-pro {
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+}
+
+.list-group a {
+  text-decoration: none;
+}
+
+.list-group .list-group-item {
+  background-color: var(--navy-blue);
+  color: white;
+  border: none;
+}
+
+.footer-text span.brand {
+  padding-left: 0.5rem;
+  font-weight: bold;
+  font-size: 2rem;
+}
