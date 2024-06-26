@@ -153,8 +153,8 @@ body::before {
   background-color: var(--light-blue);
 }
 
-.technician-image {
-  width: 95%;
+img.technician-image {
+  width: 100%;
 }
 
 .banners {
@@ -239,10 +239,6 @@ body::before {
 
 /* Form section */
 
-.form {
-  transform: translateY(-3px);
-}
-
 .form .custom-container {
   max-width: 1400px;
   margin-inline: auto;
@@ -271,11 +267,7 @@ button[type="submit"] {
   height: 80px;
   width: 300px;
   background-color: var(--dark-yellow);
-  position: absolute;
-  bottom: -32px;
-  left: 50%;
-  transform: translateX(-50%);
-  left: 30;
+  margin-inline: auto;
   clip-path: polygon(
     0 0,
     100% 0,
