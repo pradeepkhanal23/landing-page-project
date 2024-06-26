@@ -37,6 +37,12 @@
     display: flex;
     align-items: center;
   }
+
+  .booking .additional-info {
+    flex-direction: row;
+    justify-content: start;
+    gap: 3rem;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */

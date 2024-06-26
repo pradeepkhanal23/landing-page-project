@@ -538,3 +538,46 @@ section.cta img.aqua-pro {
 .cta {
   background-color: rgb(232, 230, 230);
 }
+
+/* tetimonials */
+.testimonials article {
+  position: relative;
+}
+
+.testimonials article img {
+  transform: rotate(180deg);
+}
+
+.testimonials .testimony {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* bookings */
+
+.booking article.mapbox {
+  height: 400px;
+  width: 100%;
+  background-color: gray;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 4rem;
+}
+
+.booking form input {
+  background-color: var(--bg-color);
+}
+
+.booking .additional-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.booking .additional-info span {
+  font-size: 0.8rem;
+}
