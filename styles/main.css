@@ -526,3 +526,15 @@ button.accordion-button {
 .accordion-body {
   text-align: left;
 }
+
+/* CTA section */
+section.cta img.aqua-pro {
+  object-fit: contain;
+  border-radius: 50%;
+  height: 250px;
+  width: 250px;
+}
+
+.cta {
+  background-color: rgb(232, 230, 230);
+}

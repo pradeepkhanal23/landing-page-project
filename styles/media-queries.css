@@ -32,6 +32,11 @@
     border-left: 2px solid rgba(128, 128, 128, 0.248);
     border-right: 2px solid rgba(128, 128, 128, 0.248);
   }
+
+  .cta .cta-row {
+    display: flex;
+    align-items: center;
+  }
 }
 
 /* X-Large devices (large desktops, 1200px and up) */
